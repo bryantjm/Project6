@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDgn1pK7ZbjXDKGGZ3PUiS69L8hi8j5j9A&sensor=true">
+        </script>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        
+        <title>test</title>     
+
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="stylesheet" href="assets/css/themes/vanilla.css" />
+
+         <link rel="stylesheet" href="assets/css/app.css"> 
+
+ 
+        <script src="assets/js/libs/modernizr.foundation.js"></script>
+
+  <pre><code><link rel="stylesheet" type="text/css" href="jquery.pageslide.css"></code></pre>
+        
+</head>
+ 
+
+<body>
+
+
+<!-- BEGIN: Sticky Header -->
+<div id="home"></div>
+
+<div id="header_container" >
+
+        <div id="left-triangle"> </div>
+        <div id="right-triangle"></div>
+
+
+    <!-- Navagation Bar -->
+    <ul id="menu">
+    <li>
+        <a  href="javascript:$.pageslide({ direction: 'left', href:'#new' })" class=" icon-map-marker" style="font-size: 44px;"></a>
+
+        <ul>
+            <li><a  href="#new" class="slideup">Add Location</a></li>
+        </ul>
+
+    </li>
+    <li><a  href="javascript:$.pageslide({ direction: 'right', href:'#edit' })" class="icon-wrench" style="font-size: 44px;"></a>
+
+        <ul>
+            <li><a href="#edit" >Edit Location</a></li>
+        </ul>
+    </li>
+    </ul>
+
+</div>
+<!-- Navagation Bar -->
+<!-- END: Sticky Header -->
+ 
+ <div class="verticalLine">
+
+</div>
+
+ <div class="verticalLine2">
+
+</div>
+
+<!-- BEGIN: Page Content -->
+
+
+<div id="container">
+    <div id="content">
+
+<!--
+    <a class="button" id="mapIO"><i class="icon-remove"></i> Map</a>
+    <a class="button" id="currentLoc"><i class="icon-remove"></i> Locate</a>
+ Gmaps -->
+<!-- Gmaps -->
+
+<div id="jqt">
+    <div id="map" class="map"></div>
+
+    <!-- Settings -->
+
+            <div id="settings">
+                <header class="toolbar">
+                    <h1>Settings</h1>
+                    <a class="leftButton button slidedown" id="infoButton" href="#home"><i class="icon-home"></i></a>
+                </header>
+                <form action="id" id="settings" class="scroll">             
+                    <ul class="edit rounded">
+                        <li>
+                            <label for="icon">Marker Icon URL</label>
+                            <input type="text" name="icon" placeholder="http://www.example.com/marker.png" id="icon">
+                        </li>
+                        <li>
+                            <label for="size">Marker Icon Size</label>
+                            <input type="text" name="size" placeholder="40,40" id="size">
+                        </li>
+                        <li>
+                            <label for="size">Default Map Type</label>
+                            <select id="map_type" name="map_type">
+                                <option value="HYBRID">Hyrbid</option>
+                                <option value="ROADMAP">Roadmap</option>
+                                <option value="SATELLITE">Satellite</option>
+                                <option value="TERRAIN">Terrain</option>
+                            </select>
+                        </li>
+                    </ul>
+                    <div class="hidden-page">
+                        <button class="submit redButton">Save Settings</button>
+                    </div>
+                </form>                   
+            </div>
+
+    <!--Add/edit location -->
+     <div id="new" style="display: none;">
+               
+                <header class="toolbar">
+                    <h1 style="color: rgb(204, 204, 204);">New Location</h1>
+                </header>
+                
+                <form action="id" id="new-location" class="scroll">
+                    <ul class="edit rounded">
+                        <li><input type="text" name="name" placeholder="Location Name" id="name"></li>
+                        <li><input type="text" name="street" placeholder="Street Address" id="street"></li>
+                        <li><input type="text" name="city" placeholder="City" id="city"></li>
+                        <li><input type="text" name="state" placeholder="St" id="state"></li>
+                        <li><input type="text" name="zip" placeholder="Zip Code" id="zip"></li>
+                    </ul>
+                    
+                    <div class="hidden-page">
+                        <button class="submit redButton">Add Location</button>
+                    </div>
+                    
+                </form> 
+                
+            </div>
+            
+            <div id="edit" style="display: none;">
+                
+                <header class="toolbar">
+                    <h1 style="color: rgb(204, 204, 204);">Edit Location</h1>
+                </header>
+                
+                <form action="id" id="edit-location" class="scroll">
+                    <ul class="edit rounded">
+                        <li><input type="text" name="name" placeholder="Location Name" id="name"></li>
+                        <li><input type="text" name="street" placeholder="Street Address" id="street"></li>
+                        <li><input type="text" name="city" placeholder="City" id="city"></li>
+                        <li><input type="text" name="state" placeholder="St" id="state"></li>
+                        <li><input type="text" name="zip" placeholder="Zip Code" id="zip"></li>
+                    </ul>
+                    
+                    <div class="hidden-page">
+                        <button class="submit redButton">Edit Location</button>
+                    </div>
+                    
+                </form>             
+                    
+            </div>
+        </div>
+        <!--Add/edit location -->
+    </div>
+
+<!-- END: Page Content -->
+
+ 
+<i id="hideB" class="button hideB   icon-download-alt"></i>
+<!-- BEGIN: Sticky Footer -->
+<div id="footer_container">
+   
+
+        <div id="left-triangle2"> </div>
+        <div id="right-triangle2"></div>
+
+            <!--Search -->
+             <div class="page">
+                    <form action="#" method="get" id="search">
+                        <div class="location">
+                            <label for="location"><i class="icon-search"></i> Search</label>
+                            <input type="text" value="" id="location" />
+                        </div>
+                   
+                        <div class="distance">
+                            <label for="distance">Distance</label>
+                            <select name="distance" id="distance">
+                                <option value="">--</option>
+                                <option value="5">5 Mi</option>
+                                <option value="10">10 Mi</option>
+                                <option value="15">15 Mi</option>
+                                <option value="25">25 Mi</option>
+                                <option value="50">50 Mi</option>
+                                <option value="100">100 Mi</option>
+                            </select>
+                            <a href="#" class="clear" style="display:none">Clear Search</a>
+                        </div>
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+
+    <!-- Bottom Game Controls -->
+        <div class="controls title-bar2">
+            <h1>.</h1>
+
+            </br>                   
+
+            <i class="icon-arrow-up button ctrl-up"></i>
+            <i class="icon-arrow-down button ctrl-down"></i>
+            <i class="icon-arrow-right button ctrl-right"></i>
+            <i class="icon-arrow-left button ctrl-left"></i>
+
+            <i class="icon-circle button ctrl-select"></i>
+            <i class="icon-circle-blank button ctrl-start"></i>
+
+            <i class="ctrl-b button  icon-zoom-out" style="font-size: 23px;"></i>
+            <i class="ctrl-a button  icon-zoom-in" style="font-size: 23px;"></i>               
+        </div>  
+    <!-- Bottom Game Controls -->
+
+
+</div>    
+</div>
+<!-- END: Sticky Footer -->
+
+      <!--  <footer>
+            <p class="copy">&copy; 2013 - Jacob Bryant</p>
+        </footer>
+        -->
+       
+ 
+        
+<!-- Scripts -->
+
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="assets/js/libs/jquery.js"><\/script>')</script>
+        <script src="assets/js/libs/jqtouch.js" type="text/javascript"></script>
+        <script src="assets/js/libs/jqtouch-jquery.js" type="text/javascript"></script>
+        <script type="text/javascript" src="assets/js/libs/localstoragedb.js"></script>
+        <script type="text/javascript" src="assets/js/mobilemap.js"></script>
+        <script src="assets/js/app.js"></script> 
+
+        <script type="text/javascript" src="jquery.pageslide.min.js"></script>
+
+</body>
+</html> 
