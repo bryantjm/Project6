@@ -41,19 +41,26 @@
     <!-- Navagation Bar -->
     <ul id="menu">
     <li>
-        <a  href="javascript:$.pageslide({ direction: 'left', href:'#new' })" class=" icon-map-marker" style="font-size: 44px;"></a>
+        <a  href="javascript:$.pageslide({ direction: 'right', href:'#new' })" class=" icon-map-marker" style="font-size: 44px;"></a>
 
         <ul>
             <li><a  href="#new" class="slideup">Add Location</a></li>
         </ul>
 
     </li>
-    <li><a  href="javascript:$.pageslide({ direction: 'right', href:'#edit' })" class="icon-wrench" style="font-size: 44px;"></a>
+     <li style="margin-left:16%; margin-right:21%"><a  href="javascript:$.pageslide({ direction: 'right', href:'#settings' })" class="icon-cog" style="font-size: 44px;"></a>
+
+        <ul>
+            <li><a href="#settings" >Change Settings</a></li>
+        </ul>
+    </li>
+    <li><a  href="javascript:$.pageslide({ direction: 'left', href:'#edit' })" class="icon-wrench" style="font-size: 44px;"></a>
 
         <ul>
             <li><a href="#edit" >Edit Location</a></li>
         </ul>
     </li>
+
     </ul>
 
 </div>
@@ -82,13 +89,13 @@
 
 <div id="jqt">
     <div id="map" class="map"></div>
+    <!-- Gmaps -->
 
-    <!-- Settings -->
+        <!-- Settings -->
 
-            <div id="settings">
+            <div id="settings" style="display: none;">
                 <header class="toolbar">
-                    <h1>Settings</h1>
-                    <a class="leftButton button slidedown" id="infoButton" href="#home"><i class="icon-home"></i></a>
+                    <h1 style="color: rgb(204, 204, 204);">Settings</h1>
                 </header>
                 <form action="id" id="settings" class="scroll">             
                     <ul class="edit rounded">
@@ -103,10 +110,25 @@
                         <li>
                             <label for="size">Default Map Type</label>
                             <select id="map_type" name="map_type">
-                                <option value="HYBRID">Hyrbid</option>
+                                <option value="HYBRID">Hybrid</option>
                                 <option value="ROADMAP">Roadmap</option>
                                 <option value="SATELLITE">Satellite</option>
                                 <option value="TERRAIN">Terrain</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="size">Default Zoom Level</label>
+                            <select id="zoom_lvl" name="zoom_lvl">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
                             </select>
                         </li>
                     </ul>
@@ -167,7 +189,6 @@
     </div>
 
 <!-- END: Page Content -->
-
  
 <i id="hideB" class="button hideB   icon-download-alt"></i>
 <!-- BEGIN: Sticky Footer -->
@@ -180,13 +201,14 @@
             <!--Search -->
              <div class="page">
                     <form action="#" method="get" id="search">
+                        <button type="submit" class="searchB">Search</button>
                         <div class="location">
-                            <label for="location"><i class="icon-search"></i> Search</label>
-                            <input type="text" value="" id="location" />
+                            <label for="location" style="color:white"><i class="icon-search"></i> Search</label>
+                            <input type="text" value="" id="location" style=" padding-right: 26%; " />
                         </div>
-                   
+
                         <div class="distance">
-                            <label for="distance">Distance</label>
+                            <label for="distance" style="color:white">Distance</label>
                             <select name="distance" id="distance">
                                 <option value="">--</option>
                                 <option value="5">5 Mi</option>
@@ -198,7 +220,7 @@
                             </select>
                             <a href="#" class="clear" style="display:none">Clear Search</a>
                         </div>
-                        <button type="submit">Search</button>
+                        
                     </form>
                 </div>
 
